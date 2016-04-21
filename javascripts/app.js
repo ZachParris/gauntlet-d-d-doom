@@ -1,3 +1,6 @@
+var lastId;
+// This is the Player variable
+var Player;
 /*
   Test code to generate a human player and an orc player
  */
@@ -23,11 +26,17 @@ $(document).ready(function() {
     Show the initial view that accepts player name
    */
   $("#player-setup").show();
-
   /*
     When any button with card__link class is clicked,
     move on to the next view.
    */
+
+   //Click to choose the weapon and class
+  $("body").click(function(e){
+    if (e.target.id !== "") {
+      lastId = e.target.id;
+    }
+  })
   $(".card__link").click(function(e) {
     var nextCard = $(this).attr("next");
     var moveAlong = false;
@@ -35,9 +44,17 @@ $(document).ready(function() {
     switch (nextCard) {
       case "card--class":
         moveAlong = ($("#player-name").val() !== "");
+        Player = new Gauntlet.Combatants.Player($("#player-name").val()); 
         break;
       case "card--weapon":
-        moveAlong = ($("#player-name").val() !== "");
+        moveAlong = (lastId !== "");
+        Player.class = lastId;
+        lastId = "";
+        break;
+      case "card--battleground":
+        moveAlong = (lastId !== "");
+        Player.weapon = lastId;
+        lastId = "";
         break;
     }
 
