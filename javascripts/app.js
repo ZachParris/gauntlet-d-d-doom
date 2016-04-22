@@ -44,7 +44,7 @@ $(document).ready(function() {
     switch (nextCard) {
       case "card--class":
         moveAlong = ($("#player-name").val() !== "");
-        Player = new Gauntlet.Combatants.Player($("#player-name").val()); 
+        Player = new Gauntlet.Combatants.Player($("#player-name").val());
         break;
       case "card--weapon":
         moveAlong = (lastId !== "");
@@ -99,6 +99,9 @@ $(document).ready(function() {
           break;
         }
         lastId = "";
+        startBattle();
+        newEnemy();
+        update();
         break;
     }
 
@@ -106,7 +109,7 @@ $(document).ready(function() {
       $(".card").hide();
       $("." + nextCard).show();
     }
-  });
+
 
   /*
     When the back button clicked, move back a view
@@ -117,4 +120,5 @@ $(document).ready(function() {
     $("." + previousCard).show();
   });
 
+});
 });
