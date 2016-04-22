@@ -48,12 +48,56 @@ $(document).ready(function() {
         break;
       case "card--weapon":
         moveAlong = (lastId !== "");
-        Player.class = lastId;
+        switch (lastId) {
+          case "Warrior":
+            Player.class = new Gauntlet.GuildHall.Warrior();
+            break;
+          case "Wizard":
+            Player.class = new Gauntlet.GuildHall.Wizard();
+            break;
+          case "Thief":
+            Player.class = new Gauntlet.GuildHall.Thief();
+            break;
+          case "Valkyrie":
+            Player.class = new Gauntlet.GuildHall.Valkyrie();
+            break;
+          case "Sorcerer":
+            Player.class = new Gauntlet.GuildHall.Sorcerer();
+            break;
+          case "Ninja":
+            Player.class = new Gauntlet.GuildHall.Ninja();
+            break;
+          case "Berserker":
+            Player.class = new Gauntlet.GuildHall.Berserker();
+            break;
+          case "Conjurer":
+            Player.class = new Gauntlet.GuildHall.Conjurer();
+            break;
+          case "Assassin":
+            Player.class = new Gauntlet.GuildHall.Assassin();
+            break;
+          case "Monk":
+            Player.class = new Gauntlet.GuildHall.Monk();
+            break;
+          case "Suprise":
+            Player.class = new Gauntlet.GuildHall.PlayerClass();
+            break;
+        }
         lastId = "";
         break;
       case "card--battleground":
         moveAlong = (lastId !== "");
-        Player.weapon = lastId;
+        switch (lastId) {
+          case "BroadSword":
+          Player.weapon = new BroadSword();
+          break;
+          case "WarAxe":
+          Player.weapon = new WarAxe();
+          break;
+          case "Dagger":
+          Player.weapon = new Dagger();
+          break;
+        }
         lastId = "";
         break;
     }
