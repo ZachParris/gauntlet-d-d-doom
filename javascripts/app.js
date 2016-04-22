@@ -1,3 +1,4 @@
+var Gauntlet = Game.getGauntlet();
 var lastId;
 // This is the Player variable
 var Player;

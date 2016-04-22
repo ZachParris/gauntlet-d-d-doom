@@ -1,7 +1,8 @@
 /*
   TODO: Modularize this code with IIFE or Browserify
  */
-var Gauntlet = Gauntlet || {};
+var Game = (function(oldGame) {
+var Gauntlet = Game.getGauntlet || {};
 Gauntlet.Combatants = {};
 
 /*
@@ -89,4 +90,6 @@ Gauntlet.Combatants.Monster = function() {
 };
 
 Gauntlet.Combatants.Monster.prototype = new Gauntlet.Combatants.Player();
-
+Game.setGauntlet(Gauntlet)
+return oldGame
+})(Game || {})
