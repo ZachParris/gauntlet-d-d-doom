@@ -1,9 +1,19 @@
 /*
   TODO: Modularize this code with IIFE or Browserify
  */
+var Game = (function(oldGame) {
+  //JS code
+  
 var Gauntlet = Gauntlet || {};
 Gauntlet.GuildHall = {};
 
+oldGame.getGauntlet = function(){
+  return Gauntlet;
+}
+
+oldGame.setGauntlet = function(newGauntlet){
+  Gauntlet = newGauntlet
+}
 /*
   Base function for a player, or enemy, class (profession)
  */
@@ -153,3 +163,5 @@ Gauntlet.GuildHall.Assassin = function() {
   this.strengthBonus = this.strengthBonus + 35;
 };
 Gauntlet.GuildHall.Assassin.prototype = new Gauntlet.GuildHall.Rogue();
+return oldGame
+})(Game || {})
