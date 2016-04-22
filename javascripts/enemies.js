@@ -1,4 +1,6 @@
-var Gauntlet = Game.getGauntlet();
+var Game = (function(oldGame) {
+
+  var Gauntlet = Game.getGauntlet()
 
 Gauntlet.Combatants.Orc = function() {
   this.health = this.health + 20;
@@ -20,3 +22,7 @@ Gauntlet.Combatants.Orc = function() {
 
 Gauntlet.Combatants.Orc.prototype = new Gauntlet.Combatants.Monster();
 
+Game.setGauntlet(Gauntlet);
+
+return oldGame
+})(game || {})
