@@ -1,4 +1,11 @@
 //gives health bonus Player needs, etc..wrap in IIFE name Game
+// var game = (function(oldGame) {
+//   //JS code
+//   return oldGame
+// })(game || {})
+
+
+
 function startBattle() {
 Player.health += Player.class.healthBonus
 Player.strength += Player.class.strengthBonus + Player.weapon.damage
