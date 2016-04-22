@@ -6,6 +6,7 @@ var Game = (function(oldGame) {
     Player.health += Player.class.healthBonus
     Player.strength += Player.class.strengthBonus + Player.weapon.damage
     Player.intelligence += Player.class.intelligenceBonus
+
   };
 
   $("#attackButton").click(function() {

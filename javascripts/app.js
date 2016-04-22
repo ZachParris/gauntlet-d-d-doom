@@ -5,6 +5,7 @@ var Game = (function(oldGame) {
   oldGame.getPlayer = function() {
     return Player
   }
+
   /*
     Test code to generate a human player and an orc player
    */
