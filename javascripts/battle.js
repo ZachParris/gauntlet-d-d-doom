@@ -17,9 +17,9 @@ var Game = (function(oldGame) {
     Player.health -= orc.strength
     Game.update()
     if (Player.health <= 0) {
-      playerLost()
+      setTimeout(playerLost, 2000)
     }  else if (orc.health <= 0) {
-      playerWin()
+      setTimeout(playerWin, 2000)
     }
   });
 
@@ -31,7 +31,7 @@ var Game = (function(oldGame) {
   oldGame.newEnemy = function() {
     orc = new Gauntlet.Combatants.Orc();
     orc.generateClass();
-    orc.setWeapon(new BroadSword());
+    orc.generateWeapon()
     orc.health += orc.class.healthBonus
     orc.strength = orc.class.strengthBonus + orc.weapon.damage
   };
@@ -49,7 +49,7 @@ var Game = (function(oldGame) {
 
 
 function battleResult() {
-  $("#result").html(`${Player.playerName} attacked ${orc.playerName} with ${Player.weapon} for ${Player.strength}<br>${orc.playerName} attacked ${Player.playerName} with ${orc.weapon} for ${orc.strength}<br>`)
+  $("#result").html(`${Player.playerName} attacked ${orc.playerName} with ${$('#selector').val()} for ${Player.strength}<br>${orc.playerName} attacked ${Player.playerName} with ${orc.weapon} for ${orc.strength}<br>`)
 }
 
 $("#playAgain").click(function(){

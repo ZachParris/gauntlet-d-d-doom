@@ -6,25 +6,6 @@ var Game = (function(oldGame) {
     return Player
   }
   var Gauntlet = Game.getGauntlet()
-  /*
-    Test code to generate a human player and an orc player
-   */
-  var warrior = new Gauntlet.Combatants.Human();
-  warrior.setWeapon(new WarAxe());
-  warrior.generateClass();  // This will be used for "Surprise me" option
-  console.log(warrior.toString());
-
-  var orc = new Gauntlet.Combatants.Orc();
-  orc.generateClass();
-  orc.setWeapon(new BroadSword());
-  console.log(orc.toString());
-
-  /*
-    Test code to generate a spell
-   */
-  var spell = new Gauntlet.SpellBook.Sphere();
-  console.log("spell: ", spell.toString());
-
 
   $(document).ready(function() {
     /*
@@ -84,8 +65,8 @@ var Game = (function(oldGame) {
             case "Monk":
               Player.class = new Gauntlet.GuildHall.Monk();
               break;
-            case "Suprise":
-              Player.class = new Gauntlet.GuildHall.PlayerClass();
+            case "Surprise":
+              Player.class = Player.generateClass()
               break;
           }
           lastId = "";
@@ -102,6 +83,10 @@ var Game = (function(oldGame) {
             case "Dagger":
             Player.weapon = new Dagger();
             break;
+          }
+          $("#selector").html(`<option value='${Player.weapon}'>${Player.weapon}</option>`)
+          if (Player.class.magical) {
+            $("#selector").append(`<option value='Earth'>Earth</option><option value='Fire'>Fire</option><option value='Water'>Water</option><option value='Wind'>Wind</option><option value='Heart'>Heart</option>`)
           }
           lastId = "";
           Game.startBattle();

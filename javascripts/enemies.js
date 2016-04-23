@@ -21,6 +21,27 @@ Gauntlet.Combatants.Orc = function() {
     this.class = new Gauntlet.GuildHall[randomClass]();
     return this.class;
   }
+  this.allowedWeapons = ["BroadSword", "Dagger", "WarAxe"]
+  this.generateWeapon = function() {
+    // Get a random index from the allowed weapons array
+    var random = Math.round(Math.random() * (this.allowedWeapons.length - 1));
+
+    // Get the string at the index
+    var randomWeapon = this.allowedWeapons[random];
+
+    switch(randomWeapon) {
+      case "Dagger":
+        this.weapon = new Dagger;
+        break;
+      case "BroadSword":
+        this.weapon = new BroadSword;
+        break;
+      case "WarAxe":
+        this.weapon = new WarAxe;
+        break;
+    }
+    return this.weapon;
+  }
 };
 
 Gauntlet.Combatants.Orc.prototype = new Gauntlet.Combatants.Monster();
