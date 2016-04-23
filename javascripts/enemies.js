@@ -25,4 +25,4 @@ Gauntlet.Combatants.Orc.prototype = new Gauntlet.Combatants.Monster();
 Game.setGauntlet(Gauntlet);
 
 return oldGame
-})(game || {})
+})(Game || {})

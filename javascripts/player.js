@@ -2,7 +2,7 @@
   TODO: Modularize this code with IIFE or Browserify
  */
 var Game = (function(oldGame) {
-var Gauntlet = Game.getGauntlet || {};
+var Gauntlet = Game.getGauntlet() || {};
 Gauntlet.Combatants = {};
 
 /*
