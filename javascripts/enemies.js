@@ -7,6 +7,9 @@ Gauntlet.Combatants.Orc = function() {
   this.species = "Orc";
   this.allowedClasses = ["Warrior", "Berserker", "Shaman"];
 
+  this.allowedNames = ["Joe", "Zoe", "Kate", "Greg"]
+  this.playerName = this.allowedNames[Math.floor(Math.random()*4)]
+  
   this.generateClass = function() {
     // Get a random index from the allowed classes array
     var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
