@@ -17,9 +17,9 @@ var Game = (function(oldGame) {
     Player.health -= orc.strength
     Game.update()
     if (Player.health <= 0) {
-      playerLost()
+      setTimeout(playerLost, 2000)
     }  else if (orc.health <= 0) {
-      playerWin()
+      setTimeout(playerWin, 2000)
     }
   });
 
@@ -31,7 +31,7 @@ var Game = (function(oldGame) {
   oldGame.newEnemy = function() {
     orc = new Gauntlet.Combatants.Orc();
     orc.generateClass();
-    orc.setWeapon(new BroadSword());
+    orc.generateWeapon()
     orc.health += orc.class.healthBonus
     orc.strength = orc.class.strengthBonus + orc.weapon.damage
   };
