@@ -84,6 +84,10 @@ var Game = (function(oldGame) {
             Player.weapon = new Dagger();
             break;
           }
+          $("#selector").html(`<option value='${Player.weapon}'>${Player.weapon}</option>`)
+          if (Player.class.magical) {
+            $("#selector").append(`<option value='Earth'>Earth</option><option value='Fire'>Fire</option><option value='Water'>Water</option><option value='Wind'>Wind</option><option value='Heart'>Heart</option>`)
+          }
           lastId = "";
           Game.startBattle();
           Game.newEnemy();

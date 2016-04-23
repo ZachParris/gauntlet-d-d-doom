@@ -49,7 +49,7 @@ var Game = (function(oldGame) {
 
 
 function battleResult() {
-  $("#result").html(`${Player.playerName} attacked ${orc.playerName} with ${Player.weapon} for ${Player.strength}<br>${orc.playerName} attacked ${Player.playerName} with ${orc.weapon} for ${orc.strength}<br>`)
+  $("#result").html(`${Player.playerName} attacked ${orc.playerName} with ${$('#selector').val()} for ${Player.strength}<br>${orc.playerName} attacked ${Player.playerName} with ${orc.weapon} for ${orc.strength}<br>`)
 }
 
 $("#playAgain").click(function(){
