@@ -43,7 +43,7 @@ var Game = (function(oldGame) {
   function playerWin() {
     $(".card").hide();
     $(".card--result").show();
-    $("#win-loss").html(`You killed ${orc.playerName}!`);
+    $("#win-loss").html(`You killed ${orc.playerName}! ...You Bastard!`);
     win = true;
   }
 

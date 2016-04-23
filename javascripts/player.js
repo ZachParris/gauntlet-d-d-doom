@@ -23,8 +23,8 @@ Gauntlet.Combatants.Player = function(name) {
   this.intelligence = 90;
 
   this.toString = function() {
-    var output = [this.playerName,
-      ": a ",
+    var output = ["<div id='userName'>", this.playerName,
+      ": </div><div id='cardInfo'> a ",
       this.skinColor,
       " skinned ",
       this.species,
@@ -32,10 +32,10 @@ Gauntlet.Combatants.Player = function(name) {
       this.class,
       " with ",
       this.health,
-      " health. ",
-      (this.class.magical) ? "Able to cast " : " Wielding a ",
+      " health.<br> ",
+      (this.class.magical) ? "Able to cast with a " : " Wielding a ",
       this.weapon.toString(),
-      "!"
+      "! </div>"
     ].join("");
     return output;
   };

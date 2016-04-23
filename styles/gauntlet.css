@@ -4,6 +4,34 @@ body {
   padding: 10px;
   font-size: 3em;
   text-align: center;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d5/Hardenstein_2014_-_Adventurers.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: blue;
+  animation-name: color_change;
+  animation-duration: .2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@-webkit-keyframes color_change {
+  from { color: blue; }
+  to { color: red; }
+}
+@-moz-keyframes color_change {
+  from { color: blue; }
+  to { color: red; }
+}
+@-ms-keyframes color_change {
+  from { color: blue; }
+  to { color: red; }
+}
+@-o-keyframes color_change {
+  from { color: blue; }
+  to { color: red; }
+}
+@keyframes color_change {
+  from { color: blue; }
+  to { color: red; }
 }
 
 .field {
@@ -24,6 +52,7 @@ body {
  */
 .card { 
   display: none;
+  opacity: .85;
 }
 
 .card__prompt {
@@ -39,6 +68,19 @@ body {
   text-align: center;
 }
 
+/*
+  Player info styles
+*/
+#userName {
+  font-style: italic;
+  border: 2px solid black;
+  background-color: #f85032;
+  border-radius: 10px;
+}
+#cardInfo {
+  border: 2px solid black;
+  background-color: #d2ff52;
+}
 
 /*
   Button styles
@@ -104,3 +146,4 @@ body {
   padding: 0 50px 0 20px;
   border-radius: 0 5px 5px 0;
 }
+
