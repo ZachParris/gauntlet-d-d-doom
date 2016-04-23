@@ -5,7 +5,7 @@ var Game = (function(oldGame) {
   oldGame.getPlayer = function() {
     return Player
   }
-
+  var Gauntlet = Game.getGauntlet()
   /*
     Test code to generate a human player and an orc player
    */
@@ -127,5 +127,6 @@ var Game = (function(oldGame) {
 
   });
   });
+  Game.setGauntlet(Gauntlet)
   return oldGame
 })(Game || {})

@@ -1,6 +1,7 @@
 var Game = (function(oldGame) {
   //gives health bonus Player needs, etc..wrap in IIFE name Game
   var Player
+  var Gauntlet = Game.getGauntlet()
   oldGame.startBattle = function() {
     Player = Game.getPlayer()
     Player.health += Player.class.healthBonus

@@ -4,7 +4,7 @@
 
 var Game = (function(oldGame) {
 
-var Gauntlet = game.getGauntlet() || {};
+var Gauntlet = Game.getGauntlet() || {};
 Gauntlet.SpellBook = {};
 
 
@@ -37,4 +37,4 @@ Gauntlet.SpellBook.Sphere.prototype = new Gauntlet.SpellBook.Spell();
 Game.setGauntlet(Gauntlet);
 
 return oldGame
-})(game || {})
+})(Game || {})
