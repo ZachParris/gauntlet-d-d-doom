@@ -22,6 +22,7 @@ var Sword = function() {
   this.damage = 14;
   this.hands = 2;
 };
+
 this.Sword.prototype = new Weapon();
 
 oldGame.getSword = function() {
@@ -43,5 +44,7 @@ var WarAxe = function() {
 };
 WarAxe.prototype = new Weapon();
 
+
 return oldGame
 })(Game || {})
+

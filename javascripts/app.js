@@ -74,14 +74,14 @@ var Game = (function(oldGame) {
         case "card--battleground":
           moveAlong = (lastId !== "");
           switch (lastId) {
-            case "BroadSword":
-            Player.weapon = new BroadSword();
+            case "Sword":
+            Player.weapon = Game.getSword();
             break;
             case "WarAxe":
-            Player.weapon = new WarAxe();
+            Player.weapon = Game.getAxe();
             break;
             case "Dagger":
-            Player.weapon = new Dagger();
+            Player.weapon = Game.getDagger();
             break;
           }
           $("#selector").html(`<option value='${Player.weapon}'>${Player.weapon}</option>`)
