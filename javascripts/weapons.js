@@ -1,3 +1,5 @@
+var Game = (function(oldGame) {
+
 var Weapon = function() {
   this.name = "bare hands";
   this.damage = 1;
@@ -15,12 +17,24 @@ var Dagger = function() {
 };
 Dagger.prototype = new Weapon();
 
-var BroadSword = function() {
-  this.name = "broad sword";
+var Sword = function() {
+  this.name = "sword";
   this.damage = 14;
   this.hands = 2;
 };
-BroadSword.prototype = new Weapon();
+this.Sword.prototype = new Weapon();
+
+oldGame.getSword = function() {
+  return new Sword()
+}
+
+oldGame.getAxe = function() {
+  return new WarAxe()
+}
+
+oldGame.getDagger = function() {
+  return new Dagger()
+}
 
 var WarAxe = function() {
   this.name = "war axe";
@@ -29,3 +43,5 @@ var WarAxe = function() {
 };
 WarAxe.prototype = new Weapon();
 
+return oldGame
+})(Game || {})
