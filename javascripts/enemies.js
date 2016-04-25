@@ -9,7 +9,7 @@ Gauntlet.Combatants.Orc = function() {
 
   this.allowedNames = ["Joe", "Zoe", "Kate", "Greg"]
   this.playerName = this.allowedNames[Math.floor(Math.random()*4)]
-  
+
   this.generateClass = function() {
     // Get a random index from the allowed classes array
     var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
@@ -31,13 +31,13 @@ Gauntlet.Combatants.Orc = function() {
 
     switch(randomWeapon) {
       case "Dagger":
-        this.weapon = new Dagger;
+        this.weapon = Game.getDagger();
         break;
       case "Sword":
-        this.weapon = new Sword;
+        this.weapon = Game.getSword();
         break;
       case "WarAxe":
-        this.weapon = new WarAxe;
+        this.weapon = Game.getAxe();
         break;
     }
     return this.weapon;

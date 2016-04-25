@@ -75,13 +75,13 @@ var Game = (function(oldGame) {
           moveAlong = (lastId !== "");
           switch (lastId) {
             case "Sword":
-            Player.weapon = new Sword();
+            Player.weapon = Game.getSword();
             break;
             case "WarAxe":
-            Player.weapon = new WarAxe();
+            Player.weapon = Game.getAxe();
             break;
             case "Dagger":
-            Player.weapon = new Dagger();
+            Player.weapon = Game.getDagger();
             break;
           }
           $("#selector").html(`<option value='${Player.weapon}'>${Player.weapon}</option>`)
