@@ -74,8 +74,8 @@ var Game = (function(oldGame) {
         case "card--battleground":
           moveAlong = (lastId !== "");
           switch (lastId) {
-            case "BroadSword":
-            Player.weapon = new BroadSword();
+            case "Sword":
+            Player.weapon = new Sword();
             break;
             case "WarAxe":
             Player.weapon = new WarAxe();

@@ -19,9 +19,9 @@ oldGame.setGauntlet = function(newGauntlet){
  */
 Gauntlet.GuildHall.PlayerClass = function() {
   this.name = "Beggar";
-  this.healthBonus = 1000;
-  this.strengthBonus = 1000;
-  this.intelligenceBonus = 1000;
+  this.healthBonus = 100;
+  this.strengthBonus = 0;
+  this.intelligenceBonus = 0;
   this.magical = false;
 
   this.toString = function() {

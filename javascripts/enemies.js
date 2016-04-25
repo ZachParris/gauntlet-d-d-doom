@@ -21,7 +21,7 @@ Gauntlet.Combatants.Orc = function() {
     this.class = new Gauntlet.GuildHall[randomClass]();
     return this.class;
   }
-  this.allowedWeapons = ["BroadSword", "Dagger", "WarAxe"]
+  this.allowedWeapons = ["Sword", "Dagger", "WarAxe"]
   this.generateWeapon = function() {
     // Get a random index from the allowed weapons array
     var random = Math.round(Math.random() * (this.allowedWeapons.length - 1));
@@ -33,8 +33,8 @@ Gauntlet.Combatants.Orc = function() {
       case "Dagger":
         this.weapon = new Dagger;
         break;
-      case "BroadSword":
-        this.weapon = new BroadSword;
+      case "Sword":
+        this.weapon = new Sword;
         break;
       case "WarAxe":
         this.weapon = new WarAxe;

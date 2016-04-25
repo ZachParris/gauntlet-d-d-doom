@@ -15,12 +15,12 @@ var Dagger = function() {
 };
 Dagger.prototype = new Weapon();
 
-var BroadSword = function() {
-  this.name = "broad sword";
+var Sword = function() {
+  this.name = "sword";
   this.damage = 14;
   this.hands = 2;
 };
-BroadSword.prototype = new Weapon();
+Sword.prototype = new Weapon();
 
 var WarAxe = function() {
   this.name = "war axe";
@@ -28,4 +28,3 @@ var WarAxe = function() {
   this.hands = 2;
 };
 WarAxe.prototype = new Weapon();
-
