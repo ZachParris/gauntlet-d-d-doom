@@ -33,7 +33,7 @@ var Game = (function(oldGame) {
           Player = new Gauntlet.Combatants.Player($("#player-name").val());
           break;
         case "card--weapon":
-          moveAlong = (lastId !== "");
+          moveAlong = (lastId !== "" && lastId !== undefined);
           switch (lastId) {
             case "Warrior":
               Player.class = new Gauntlet.GuildHall.Warrior();
@@ -94,7 +94,7 @@ var Game = (function(oldGame) {
           Game.update();
           break;
       }
-
+      console.log("move", moveAlong);
       if (moveAlong) {
         $(".card").hide();
         $("." + nextCard).show();

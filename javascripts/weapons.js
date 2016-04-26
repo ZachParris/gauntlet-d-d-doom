@@ -23,7 +23,7 @@ var Sword = function() {
   this.hands = 2;
 };
 
-this.Sword.prototype = new Weapon();
+Sword.prototype = new Weapon();
 
 oldGame.getSword = function() {
   return new Sword()
