@@ -46,6 +46,13 @@ body {
 /*
   Section styles
  */
+.flex {
+  display: flex;
+}
+#player-stat, #enemy-stat {
+  border: 0px;
+  
+}
 .card { 
   display: none;
   opacity: .85;
