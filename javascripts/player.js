@@ -9,7 +9,7 @@ Gauntlet.Combatants = {};
   Define the base object for any player of Gauntlet,
   whether a human player or a monster.
  */
-Gauntlet.Combatants.Player = function(name) {
+Gauntlet.Combatants.Player = function(name) { 
   this.species = null;
   this.class = null;
   this.weapon = null;
@@ -35,7 +35,7 @@ Gauntlet.Combatants.Player = function(name) {
       " health.<br> ",
       (this.class.magical) ? "Able to cast with a " : " Wielding a ",
       this.weapon.toString(),
-      "! </div>"
+      "! </div>0"
     ].join("");
     return output;
   };
@@ -87,7 +87,7 @@ Gauntlet.Combatants.Human = function() {
   this.skinColor = this.skinColors[randomSkin];
 
   this.allowedClasses = ["Warrior", "Berserker", "Valkyrie", "Monk"];
-};
+n};
 Gauntlet.Combatants.Human.prototype = new Gauntlet.Combatants.Player();
 
 

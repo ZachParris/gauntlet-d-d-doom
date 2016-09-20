@@ -1,3 +1,5 @@
+"use strict"
+
 var Game = (function(oldGame) {
 
 var Weapon = function() {
