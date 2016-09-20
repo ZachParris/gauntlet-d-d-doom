@@ -73,7 +73,11 @@ Gauntlet.Combatants.Player.prototype.generateClass = function() {
 };
 
 /*
+<<<<<<< HEAD
   Define the base properties for a human in a
+=======
+  Define the base properties for a human in a
+>>>>>>> 200301bcd69d43ac350979ffeb9619b82aca0e1d
   constructor function.
  */
 Gauntlet.Combatants.Human = function() {
@@ -92,7 +96,11 @@ Gauntlet.Combatants.Human.prototype = new Gauntlet.Combatants.Player();
 
 
 /*
+<<<<<<< HEAD
   Define the base properties for a monster in a
+=======
+  Define the base properties for a monster in a
+>>>>>>> 200301bcd69d43ac350979ffeb9619b82aca0e1d
   constructor function.
  */
 Gauntlet.Combatants.Monster = function() {
