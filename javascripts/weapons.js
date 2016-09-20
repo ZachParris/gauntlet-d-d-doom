@@ -49,4 +49,3 @@ WarAxe.prototype = new Weapon();
 
 return oldGame
 })(Game || {})
-
